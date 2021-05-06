@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" id="html">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Lorenzo Catalano, Author: Lorenzo Catalano">
     <link rel="stylesheet" href="css/style.css">
-    <title>Lorenzo Catalano - Home</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <title>Lorenzo Catalano - Portfolio</title>
 </head>
-<body id="home">
+<body id="body">
 
     <!-- Nav -->
     <nav class="navbar is-spaced is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="is-flex is-align-items-center">
-                <a href="" class="is-flex is-align-items-center">
-                    <img src="assets/images/logo.svg" width="30" height="30" alt="Logo">
+                <a href="#body" class="is-flex is-align-items-center">
+                    <figure class="image is-32x32">
+                        <img src="assets/images/logo.svg" alt="Logo">
+                    </figure>
                     <p class="ml-3 has-text-white">Lorenzo&nbsp;Catalano</p>
                 </a>
             
@@ -27,7 +31,7 @@
             
             <div class="navbar-menu" id="navMenu">
                 <div class="navbar-end">
-                    <a class="navbar-item" href="#home">Home</a>
+                    <a class="navbar-item" href="#body">Home</a>
                     <a class="navbar-item" href="#projects">Projecten</a>
                     <a class="navbar-item" href="#competencies">Competenties</a>
                     <a class="navbar-item" href="#cv">CV</a>
@@ -38,7 +42,7 @@
     </nav>
 
     <!-- Hero -->
-    <section class="section pt-6">
+    <section id="hero" class="section pt-6">
         <div class="container hero-container">
             <div class="hero-presentation mb-6">
                 <h1 class="title is-1">Lorenzo Catalano</h1>
@@ -52,22 +56,38 @@
                     </figure>
                 </div>
                 <div class="card-content has-text-centered">
-                    <h4 class="title is-4">Wie ben ik?</h4>
+                    <h4 class="title is-4 underlined">Wie ben ik?</h4>
             
                     <div class="content">
                         <p>Mijn naam is Lorenzo Catalano. Ik heb een passie voor technologie en programmeren. Ik heb net mijn eerste jaar aan de UCLL afgerond, waar ik toegepaste informatica studeer. Ook werk ik graag van tijd tot tijd aan enkele kleine zijprojecten. Deze website is gemaakt om al deze projecten, samen met mijn cv, op één plek te hebben.</p>
                     </div>
                 </div>
                 <footer class="card-footer">
-                    <a href="https://github.com/lorenzo3117" class="card-footer-item" target="_blank">Github</a>
-                    <a href="https://www.linkedin.com/in/lorenzo-catalano-a064211b3/" class="card-footer-item" target="_blank">LinkedIn</a>
+                    <a id="modal-open-button" class="card-footer-item">Video</a>
+                    <a href="https://github.com/lorenzo3117" class="card-footer-item" target="_blank" rel="noreferrer">Github</a>
+                    <a href="https://www.linkedin.com/in/lorenzo-catalano-a064211b3/" class="card-footer-item" target="_blank" rel="noreferrer">LinkedIn</a>
                 </footer>
             </div>
         </div>
     </section>
 
+    <!-- Presentation video modal -->
+    <div id="modal" class="modal">
+        <div onclick="closeModal()" class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Presentatie video</p>
+            <button onclick="closeModal()" class="delete" aria-label="close"></button>
+          </header>
+          <section class="modal-card-body is-flex is-justify-content-center">
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/DreLdoH7tnA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </section>
+        </div>
+      </div>
+
     <!-- Projects -->
-    <section class="section" id="projects">
+    <span id="projects" class="anchor"></span>
+    <section class="section">
         <div class="container">
             <h3 class="title is-3">Projecten</h3>
 
@@ -87,8 +107,8 @@
                         </div>
                     </div>
                     <footer class="card-footer mt-auto">
-                        <a href="https://lorenzo3117.github.io/weather-app/" class="card-footer-item" target="_blank">Website</a>
-                        <a href="https://github.com/lorenzo3117/weather-app" class="card-footer-item" target="_blank">Github</a>
+                        <a href="https://lorenzo3117.github.io/weather-app/" class="card-footer-item" target="_blank" rel="noreferrer">Website</a>
+                        <a href="https://github.com/lorenzo3117/weather-app" class="card-footer-item" target="_blank" rel="noreferrer">Github</a>
                     </footer>
                 </div>
 
@@ -107,7 +127,7 @@
                         </div>
                     </div>
                     <footer class="card-footer mt-auto">
-                        <a href="https://github.com/lorenzo3117/python-text-finder" class="card-footer-item" target="_blank">Github</a>
+                        <a href="https://github.com/lorenzo3117/python-text-finder" class="card-footer-item" target="_blank" rel="noreferrer">Github</a>
                     </footer>
                 </div>
 
@@ -126,7 +146,7 @@
                         </div>
                     </div>
                     <footer class="card-footer mt-auto">
-                        <a href="https://r0790963.webontwerp.ucll.be/website/" class="card-footer-item" target="_blank">Website</a>
+                        <a href="https://r0790963.webontwerp.ucll.be/website/" class="card-footer-item" target="_blank" rel="noreferrer">Website</a>
                     </footer>
                 </div>
 
@@ -145,7 +165,7 @@
                         </div>
                     </div>
                     <footer class="card-footer mt-auto">
-                        <a href="https://github.com/lorenzo3117/python-sorting-scripts" class="card-footer-item" target="_blank">Github</a>
+                        <a href="https://github.com/lorenzo3117/python-sorting-scripts" class="card-footer-item" target="_blank" rel="noreferrer">Github</a>
                     </footer>
                 </div>
             </div>
@@ -153,7 +173,8 @@
     </section>
 
     <!-- CV -->
-    <section class="section" id="cv">
+    <span id="cv" class="anchor"></span>
+    <section class="section">
         <div class="container">
             <h2 class="title is-3">CV</h2>
 
@@ -162,86 +183,88 @@
     </section>
 
     <!-- Competencies -->
-    <section class="section" id="competencies">
-        <div class="container has-text-justified">
+    <span id="competencies" class="anchor"></span>
+    <section class="section">
+        <div class="container">
             <h3 class="title is-3">Competenties</h3>
             
             <div class="competencies-grid">
-                <div>
-                    <h5 class="title is-5 mb-4">DLR 1</h5>
-                    <h6 class="title is-6 mb-2">De professionele bachelor TI analyseert een probleem, vertaalt dit naar een IT-context en geeft de informatiebehoeften van een organisatie gestructureerd weer door gebruik te maken van analyse-en modelleringstechnieken.</h6>
-                    <p></p>
+                <div class="box">
+                    <h5 class="title is-5 mb-2">DLR 1</h5>
+                    <h6 class="title is-6 mb-4">De professionele bachelor TI analyseert een probleem, vertaalt dit naar een IT-context en geeft de informatiebehoeften van een organisatie gestructureerd weer door gebruik te maken van analyse-en modelleringstechnieken.</h6>
+                    <p>In het eerste jaar hadden we het vak 'Technieken van datamodellering' en in het tweede jaar 'Business Process Management' gehad. We kregen een opgave van een probleem en we moesten het analyseren en in schema's gieten.</p>
                 </div>
-                <div>
-                    <h5 class="title is-5 mb-4">DLR 2</h5>
-                    <h6 class="title is-6 mb-2">De professionele bachelor TI verzamelt en verwerkt proces- en data gegevens, slaat ze op en stelt ze ter beschikking, zodat deze op een correcte en efficiënte manier kunnen worden opgevraagd.</h6>
-                    <p></p>
+                <div class="box">
+                    <h5 class="title is-5 mb-2">DLR 2</h5>
+                    <h6 class="title is-6 mb-4">De professionele bachelor TI verzamelt en verwerkt proces- en data gegevens, slaat ze op en stelt ze ter beschikking, zodat deze op een correcte en efficiënte manier kunnen worden opgevraagd.</h6>
+                    <p>Bij meerdere vakken werd er informatie verzamelt en opgeslagen in een database. Dit was van toepassing bij dataquerying, webontwikkeling 3 & 4, projectweek 1 & 2, etc.</p>
                 </div>
-                <div>
-                    <h5 class="title is-5 mb-4">DLR 3</h5>
-                    <h6 class="title is-6 mb-2">De professionele bachelor TI ontwerpt, bouwt, documenteert en test kwalitatieve IT-oplossingen.</h6>
-                    <p></p>
-                </div>
-
-                <div>
-                    <h5 class="title is-5 mb-4">DLR 4</h5>
-                    <h6 class="title is-6 mb-2">De professionele bachelor TI installeert, configureert, beveiligt, onderhoudt en ondersteunt IT-oplossingen en past ze indien nodig aan zodat ze blijven beantwoorden aan de veranderende behoeften van een organisatie.</h6>
-                    <p></p>
-                </div>
-                <div>
-                    <h5 class="title is-5 mb-4">DLR 5</h5>
-                    <h6 class="title is-6 mb-2">De professionele bachelor TI handelt deontologisch en maatschappelijk verantwoord, conform bedrijfs-en organisatiecontext, best practices en strategieën vanuit eigen inzicht en kennis. MM DNA –maatschappelijk engagement.</h6>
-                    <p></p>
-                </div>
-                <div>
-                    <h5 class="title is-5 mb-4">DLR 6</h5>
-                    <h6 class="title is-6 mb-2">De professionele bachelor TI onderzoekt en evalueert kritisch bestaande en innovatieve IT-oplossingen. MM DNA -Onderzoekend vermogen.</h6>
-                    <p></p>
+                <div class="box">
+                    <h5 class="title is-5 mb-2">DLR 3</h5>
+                    <h6 class="title is-6 mb-4">De professionele bachelor TI ontwerpt, bouwt, documenteert en test kwalitatieve IT-oplossingen.</h6>
+                    <p>In het derde semester hadden we een vak genaamd 'Testing'. Ik heb geleerd hoe goed applicaties te testen. Voor de vakken waar Java in voorkwam (BOP, OOP) moesten we vaak testen maken en soms ook documenteren.</p>
                 </div>
 
-                <div>
-                    <h5 class="title is-5 mb-4">DLR 7</h5>
-                    <h6 class="title is-6 mb-2">De professionele bachelor TI geeft advies over IT-oplossingen, -producten, -diensten en –technologieën voor verschillende domeinen en/of sectoren.</h6>
-                    <p></p>
+                <div class="box">
+                    <h5 class="title is-5 mb-2">DLR 4</h5>
+                    <h6 class="title is-6 mb-4">De professionele bachelor TI installeert, configureert, beveiligt, onderhoudt en ondersteunt IT-oplossingen en past ze indien nodig aan zodat ze blijven beantwoorden aan de veranderende behoeften van een organisatie.</h6>
+                    <p>Bij de vakken 'Besturingssystemen 1 & 2' en 'Internetprogrammeren major' bijvoorbeeld, hebben we een virtuele Linux machines moeten installeren en configureren.</p>
                 </div>
-                <div>
-                    <h5 class="title is-5 mb-4">DLR 8</h5>
-                    <h6 class="title is-6 mb-2">De professionele bachelor TI kan zelfstandig en in een multidisciplinair en/of multicultureel team een opdracht op projectmatige wijze aanpakken. De professionele bachelor TI kan eenvoudig leidinggevende taken uitvoeren en een projectplan ontwerpen, interpreteren, uitvoeren, aanpassen en toelichten. MM DNA –cocreatie MM DNA –maatschappelijk engagement.</h6>
-                    <p></p>
+                <div class="box">
+                    <h5 class="title is-5 mb-2">DLR 5</h5>
+                    <h6 class="title is-6 mb-4">De professionele bachelor TI handelt deontologisch en maatschappelijk verantwoord, conform bedrijfs-en organisatiecontext, best practices en strategieën vanuit eigen inzicht en kennis.</h6>
+                    <p>Is niet aan bod gekomen.</p>
                 </div>
-                <div>
-                    <h5 class="title is-5 mb-4">DLR 9</h5>
-                    <h6 class="title is-6 mb-2">De professionele bachelor TI communiceert minstens in het Nederlands en het Engels, mondeling en schriftelijk aangepast aan het doelpubliek. MM DNA –geletterdheid en communicatie.</h6>
+                <div class="box">
+                    <h5 class="title is-5 mb-2">DLR 6</h5>
+                    <h6 class="title is-6 mb-4">De professionele bachelor TI onderzoekt en evalueert kritisch bestaande en innovatieve IT-oplossingen.</h6>
+                    <p>Bij het vak 'Internetprogrammeren minor' kregen we een opdracht om een front-end te maken om gebruik te maken van een REST API. We mochten zelf kiezen welke front-end framework we wouden gebruiken, hierdoor heb ik zelf Angular kunnen uitproberen en onderzoeken.</p>
+                </div>
+
+                <div class="box">
+                    <h5 class="title is-5 mb-2">DLR 7</h5>
+                    <h6 class="title is-6 mb-4">De professionele bachelor TI geeft advies over IT-oplossingen, -producten, -diensten en –technologieën voor verschillende domeinen en/of sectoren.</h6>
+                    <p>Is niet aan bod gekomen.</p>
+                </div>
+                <div class="box">
+                    <h5 class="title is-5 mb-2">DLR 8</h5>
+                    <h6 class="title is-6 mb-4">De professionele bachelor TI kan zelfstandig en in een multidisciplinair en/of multicultureel team een opdracht op projectmatige wijze aanpakken. De professionele bachelor TI kan eenvoudig leidinggevende taken uitvoeren en een projectplan ontwerpen, interpreteren, uitvoeren, aanpassen en toelichten.</h6>
+                    <p>Tijdens projectweek 2 zat ik in een team met een internationale student, we spraken dus daarom allemaal in het Engels. Samen hebben we een stappenplan gemaakt en iedereen voerde correct zijn taken uit.</p>
+                </div>
+                <div class="box">
+                    <h5 class="title is-5 mb-2">DLR 9</h5>
+                    <h6 class="title is-6 mb-4">De professionele bachelor TI communiceert minstens in het Nederlands en het Engels, mondeling en schriftelijk aangepast aan het doelpubliek.</h6>
                     <p>Tijdens de opleiding zijn een aantal groepswerken aan bod gekomen, sommige waren in het Nederlands en sommige in het Engels. Tijdens de projectweek van semester 4 werd er met internationale studenten gecommuniceerd in het Engels.</p>
                 </div>
 
-                <div>
-                    <h5 class="title is-5 mb-4">DLR 10</h5>
-                    <h6 class="title is-6 mb-2">De professionele bachelor TI is zich bewust van de internationale context van het vakgebied.</h6>
-                    <p></p>
+                <div class="box">
+                    <h5 class="title is-5 mb-2">DLR 10</h5>
+                    <h6 class="title is-6 mb-4">De professionele bachelor TI is zich bewust van de internationale context van het vakgebied.</h6>
+                    <p>Het opzoeken van oplossingen gebeurt bijna alleen in het Engels. Ook werd er tijdens projectweek 2 met internationale studenten gewerkt.</p>
                 </div>
-                <div>
-                    <h5 class="title is-5 mb-4">DLR 11</h5>
-                    <h6 class="title is-6 mb-2">De professionele bachelor TI is ondernemend, neemt initiatief en reageert op nieuwe ontwikkelingen en toepassingsdomeinen. MM DNA –ondernemingszin. MM DNA –reflectie;</h4>
-                    <p></p>
+                <div class="box">
+                    <h5 class="title is-5 mb-2">DLR 11</h5>
+                    <h6 class="title is-6 mb-4">De professionele bachelor TI is ondernemend, neemt initiatief en reageert op nieuwe ontwikkelingen en toepassingsdomeinen.</h6>
+                    <p>Om de stijl van deze website te maken heb ik gebruik gemaakt van <a href="https://bulma.io/">Bulma.io</a>, een vrij recente CSS framework die ik zelf heb beslist te ontdekken/leren.</p>
                 </div>
-                <div>
-                    <h5 class="title is-5 mb-4">DLR 12</h5>
-                    <h6 class="title is-6 mb-2">De professionele bachelor TI ondersteunt veranderingsprocessen bij ingebruikname van IT-oplossingen.</h6>
-                    <p></p>
+                <div class="box">
+                    <h5 class="title is-5 mb-2">DLR 11</h5>
+                    <h6 class="title is-6 mb-4">De professionele bachelor TI ondersteunt veranderingsprocessen bij ingebruikname van IT-oplossingen.</h6>
+                    <p>Is niet aan bod gekomen.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact -->
-    <section class="section" id="contact">
+    <span id="contact" class="anchor"></span>
+    <section class="section">
         <div class="container">
             <h3 class="title is-3">Contact</h3>
 
-            <div class="contact-form">
+            <form class="contact-form" action="mailto:lorenzo.catalano@outlook.com" method="post" enctype="text/plain">
                 <div class="field">
-                    <label class="label">Naam</label>
+                    <label for="name" class="label">Naam</label>
                     <div class="control has-icons-left has-icons-right">
                         <input class="input" type="text" placeholder="Naam">
                         <span class="icon is-small is-left">
@@ -251,7 +274,7 @@
                 </div>
 
                 <div class="field">
-                    <label class="label">Email</label>
+                    <label for="email" class="label">Email</label>
                     <div class="control has-icons-left has-icons-right">
                         <input class="input" type="email" placeholder="Email">
                         <span class="icon is-small is-left">
@@ -261,27 +284,33 @@
                 </div>
 
                 <div class="field">
-                    <label class="label">Bericht</label>
+                    <label for="content" class="label">Bericht</label>
                     <div class="control">
-                        <textarea class="textarea" placeholder="Bericht"></textarea>
+                        <textarea name="content" class="textarea" placeholder="Bericht"></textarea>
                     </div>
                 </div>
 
                 <div class="control">
-                    <button class="button submit has-text-white">Versturen</button>
+                    <button type="submit" class="button submit has-text-white">Versturen</button>
+                    <button type="reset" class="button is-danger has-text-white">Clear</button>
                 </div>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <section class="section pb-5">
-        <footer class="container">
-            <p class="has-text-centered">&copy; Lorenzo Catalano</p>
+    <section class="section pb-4">
+        <footer id="footer" class="container is-flex is-justify-content-center is-align-items-center">
+            <!-- <p class="has-text-centered">&copy; Lorenzo Catalano</p> -->
+            <figure class="image is-32x32">
+                <img src="assets/images/logo.svg" alt="Logo">
+            </figure>
+            <p class="ml-3">Lorenzo&nbsp;Catalano</p>
         </footer>
     </section>
 
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script defer src="javascripts/hamburger-toggle.js"></script>
+    <script defer src="javascripts/modal.js"></script>
 </body>
 </html>
