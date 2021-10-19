@@ -33,8 +33,8 @@
                 <div class="navbar-end">
                     <a class="navbar-item" href="#body">Home</a>
                     <a class="navbar-item" href="#projects">Projecten</a>
-                    <a class="navbar-item" href="#competencies">Competenties</a>
                     <a class="navbar-item" href="#cv">CV</a>
+                    <a class="navbar-item" href="#competencies">Competenties</a>
                     <a class="navbar-item" href="#contact">Contact</a>
                 </div>
             </div>
@@ -59,31 +59,16 @@
                     <h4 class="title is-4 underlined">Wie ben ik?</h4>
             
                     <div class="content">
-                        <p>Mijn naam is Lorenzo Catalano. Ik heb een passie voor technologie en programmeren. Ik heb net mijn eerste jaar aan de UCLL afgerond, waar ik toegepaste informatica studeer. Ook werk ik graag van tijd tot tijd aan enkele kleine zijprojecten. Deze website is gemaakt om al deze projecten, samen met mijn cv, op één plek te hebben.</p>
+                        <p>Mijn naam is Lorenzo Catalano. Ik heb een passie voor technologie en programmeren. Ik heb net begonnen aan mijn derde jaar bij UCLL, waar ik toegepaste informatica studeer. Ook werk ik graag van tijd tot tijd aan enkele kleine zijprojecten. Deze website is gemaakt om al deze projecten, samen met mijn cv, op één plek te hebben.</p>
                     </div>
                 </div>
                 <footer class="card-footer">
-                    <a id="modal-open-button" class="card-footer-item">Video</a>
                     <a href="https://github.com/lorenzo3117" class="card-footer-item" target="_blank" rel="noreferrer">Github</a>
                     <a href="https://www.linkedin.com/in/lorenzo-catalano-a064211b3/" class="card-footer-item" target="_blank" rel="noreferrer">LinkedIn</a>
                 </footer>
             </div>
         </div>
     </section>
-
-    <!-- Presentation video modal -->
-    <div id="modal" class="modal">
-        <div onclick="closeModal()" class="modal-background"></div>
-        <div class="modal-card">
-          <header class="modal-card-head">
-            <p class="modal-card-title">Presentatie video</p>
-            <button onclick="closeModal()" class="delete" aria-label="close"></button>
-          </header>
-          <section class="modal-card-body is-flex is-justify-content-center">
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/DreLdoH7tnA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </section>
-        </div>
-      </div>
 
     <!-- Projects -->
     <span id="projects" class="anchor"></span>
@@ -262,39 +247,12 @@
         <div class="container">
             <h3 class="title is-3">Contact</h3>
 
-            <form class="contact-form" action="mailto:lorenzo.catalano@outlook.com" method="post" enctype="text/plain">
-                <div class="field">
-                    <label for="name" class="label">Naam</label>
-                    <div class="control has-icons-left has-icons-right">
-                        <input class="input" type="text" placeholder="Naam">
-                        <span class="icon is-small is-left">
-                            <i class="fas fa-user"></i>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="field">
-                    <label for="email" class="label">Email</label>
-                    <div class="control has-icons-left has-icons-right">
-                        <input class="input" type="email" placeholder="Email">
-                        <span class="icon is-small is-left">
-                            <i class="fas fa-envelope"></i>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="field">
-                    <label for="content" class="label">Bericht</label>
-                    <div class="control">
-                        <textarea name="content" class="textarea" placeholder="Bericht"></textarea>
-                    </div>
-                </div>
-
-                <div class="control">
-                    <button type="submit" class="button submit has-text-white">Versturen</button>
-                    <button type="reset" class="button is-danger has-text-white">Clear</button>
-                </div>
-            </form>
+            <ul>
+                <li>E-mailadres: <b>lorenzo.catalano@outlook.com</b></li>
+                <li>Telefoonnummer: <b>0491 32 37 96</b></li>
+                <li>LinkedIn: <a href="https://linkedin.com/in/lorenzo-catalano/" target="_blank"><b>linkedin.com/in/lorenzo-catalano</b></a></li>
+                <li>Github: <a href="https://github.com/lorenzo3117" target="_blank"><b>github.com/lorenzo3117</b></a></li>
+            </ul>
         </div>
     </section>
 
@@ -311,6 +269,5 @@
 
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script defer src="javascripts/hamburger-toggle.js"></script>
-    <script defer src="javascripts/modal.js"></script>
 </body>
 </html>
